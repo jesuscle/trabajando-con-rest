@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.first_name }}</td>
+      <td>{{ usuario.last_name }}</td>
+      <td>{{ usuario.email }}</td>
+    </tr>
+  </tbody>
+</table>
+<div><a *ngFor="let in of contador(tamanoTotalPaginas) ;let i = index" (click)="cargarPagina(i+1)">{{i+1}}</a>
+</div>
+
